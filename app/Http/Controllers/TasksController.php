@@ -36,12 +36,10 @@ class TasksController extends Controller
      */
     public function create()
     {
-        if(\Auth::check()){
-            $task = new Task;
-            return view('tasks.create', [
-               'task' => $task,
-            ]);
-        }
+        $task = new Task;
+        return view('tasks.create', [
+           'task' => $task,
+        ]);
         
         return redirect('/');
     }
