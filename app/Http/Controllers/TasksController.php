@@ -42,6 +42,7 @@ class TasksController extends Controller
                'task' => $task,
             ]);
         }    
+        return redirect('/');
     }
 
     /**
