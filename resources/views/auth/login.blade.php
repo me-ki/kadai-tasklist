@@ -6,7 +6,7 @@
     </div>
     
     <div class="row">
-        <div class="clo-sm-6 offset-sm-3">
+        <div class="col-sm-6 offset-sm-3">
             
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
@@ -21,6 +21,10 @@
                 
                 {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
+            
+            {{-- ユーザ登録ページへのリンク --}}
+            <p class="mt-2">New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+            
         </div>
     </div>
 @endsection
